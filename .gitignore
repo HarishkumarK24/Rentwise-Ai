@@ -9,7 +9,6 @@ backend/data/receipts/
 # Node
 node_modules/
 frontend/node_modules/
-frontend/dist/
 
 # OS / IDE
 .DS_Store
