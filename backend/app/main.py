@@ -39,8 +39,8 @@ app.add_middleware(
 # Include routes under /api
 app.include_router(api_router, prefix="/api")
 
-# Serve frontend build if present (Unified Single-Service Render Deployment)
-frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../frontend/dist"))
+# Serve frontend build if present (Unified Single-Service Deployment)
+frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../frontend/dist"))
 if os.path.exists(frontend_dist):
     app.mount("/assets", StaticFiles(directory=os.path.join(frontend_dist, "assets")), name="assets")
 
